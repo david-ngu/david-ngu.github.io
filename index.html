@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>David Nguyen</title>
+  <meta name="description" content="David Nguyen, Research Scientist at the Stanford Digital Economy Lab and Stanford HAI, working on AI, measurement and economics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%231F3A6E'/%3E%3Ctext x='8' y='12.5' font-family='monospace' font-size='11' font-weight='bold' fill='%23F0E392' text-anchor='middle'%3EDN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="desktop">
+
+  <aside class="icons" aria-label="Pages">
+    <a class="icon" href="index.html" aria-current="page">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="3" width="28" height="34" fill="#FBFAF5" stroke="#1B1D21" stroke-width="2"/><rect x="11" y="9" width="18" height="2" fill="#1F3A6E"/><rect x="11" y="15" width="18" height="2" fill="#868A8E"/><rect x="11" y="20" width="14" height="2" fill="#868A8E"/><rect x="11" y="25" width="16" height="2" fill="#868A8E"/></svg>
+      <span>about.txt</span>
+    </a>
+    <a class="icon" href="research.html">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M3 10h13l3 3h18v22H3z" fill="#F0E392" stroke="#1B1D21" stroke-width="2"/><rect x="3" y="16" width="34" height="19" fill="#E2D27A" stroke="#1B1D21" stroke-width="2"/></svg>
+      <span>Research</span>
+    </a>
+    <a class="icon" href="cv.html">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="3" width="28" height="34" fill="#FBFAF5" stroke="#1B1D21" stroke-width="2"/><rect x="6" y="3" width="28" height="9" fill="#1F3A6E"/><text x="20" y="27" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle" fill="#1F3A6E">CV</text></svg>
+      <span>CV</span>
+    </a>
+  </aside>
+
+  <main class="windows">
+    <section class="window" aria-labelledby="about-title">
+      <div class="titlebar"><h2 id="about-title">about.txt</h2><div class="controls" aria-hidden="true"><span>_</span><span>□</span><span>×</span></div></div>
+      <div class="body">
+        <div class="about">
+          <div class="photo"><img src="photo.jpg" alt="David Nguyen"></div>
+          <div>
+            <h1>David Nguyen</h1>
+            <p class="role">Research Scientist, <a href="https://digitaleconomy.stanford.edu/people/david-nguyen/">Stanford Digital Economy Lab</a>, <a href="https://hai.stanford.edu/people/david-nguyen">Stanford HAI</a></p>
+            <p>I work where AI, measurement and economics meet. My research asks how we can measure what AI is worth, including the welfare people get from generative AI that GDP misses, and how AI is changing which tasks get done and by whom.</p>
+            <p>I also use AI as a measurement tool, for example by augmenting survey data with large language models in economic research. Much of this builds on <a href="https://www.gdp-b.org/">GDP-B</a>, a framework for measuring the benefits of the digital economy that I work on with Erik Brynjolfsson.</p>
+            <p>I am also a Research Affiliate at the <a href="https://www.escoe.ac.uk/people/david-nguyen/">Economic Statistics Centre of Excellence</a>. Before Stanford I was an economist at the OECD and NIESR. I hold a PhD from the London School of Economics.</p>
+            <div class="btn-row">
+              <a class="btn" href="https://scholar.google.com/citations?user=two5sOMAAAAJ&amp;hl=en">Google Scholar</a>
+              <a class="btn" href="https://www.linkedin.com/in/davidnguyeneconomistoecdparis/">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <h3 class="section-title news-title">News</h3>
+        <ul class="entries compact">
+          <li>
+            <p class="meta">Oct 2026</p>
+            <p>I joined a panel in Brussels hosted by the European Commission's Joint Research Centre (JRC).</p>
+          </li>
+          <li>
+            <p class="meta">Oct 2026</p>
+            <p>I'll be serving as a program chair for the next <a href="https://www.escoe.ac.uk/event-type/conference/">ESCoE Conference on Economic Measurement</a>, held in Bristol.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="taskbar">
+  <a class="btn start" href="index.html"><i aria-hidden="true"></i>Start</a>
+  <nav aria-label="Pages">
+    <a class="btn" href="index.html" aria-current="page">about.txt</a>
+    <a class="btn" href="research.html">Research</a>
+    <a class="btn" href="cv.html">CV</a>
+  </nav>
+  <span class="clock" id="clock"></span>
+</footer>
+
+<script>
+  const clock = document.getElementById('clock');
+  const tick = () => clock.textContent = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  tick(); setInterval(tick, 30000);
+</script>
+</body>
+</html>
