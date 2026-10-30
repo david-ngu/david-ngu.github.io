@@ -80,5 +80,14 @@
   const tick = () => clock.textContent = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
   tick(); setInterval(tick, 30000);
 </script>
+<script>
+  // Count clicks on outside links (papers, Scholar, LinkedIn) as GoatCounter events
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="http"], a[href$=".pdf"]');
+    if (a && window.goatcounter && window.goatcounter.count)
+      window.goatcounter.count({ path: a.href, title: a.textContent.trim(), event: true });
+  });
+</script>
+<script data-goatcounter="https://davidngu.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

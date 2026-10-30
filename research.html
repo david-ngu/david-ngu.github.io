@@ -261,6 +261,10 @@
         <h3 class="section-title">Podcasts &amp; talks</h3>
         <ul class="entries compact">
           <li>
+            <h3><a href="https://www.youtube.com/watch?v=HN4BQe-tc-c" target="_blank" rel="noopener">Democratizing Statistics: How AI Can Empower Everyone (without Causing Disasters)</a></h3>
+            <p class="meta">Stanford Digital Economy Lab, Feb 2025 · with D. Levine, J. R. Enríquez</p>
+          </li>
+          <li>
             <h3><a href="https://cepr.org/multimedia/valuing-digital-services" target="_blank" rel="noopener">Valuing digital services</a></h3>
             <p class="meta">VoxTalks, Jul 2020 · with D. Coyle</p>
           </li>
@@ -298,5 +302,14 @@
   const tick = () => clock.textContent = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
   tick(); setInterval(tick, 30000);
 </script>
+<script>
+  // Count clicks on outside links (papers, Scholar, LinkedIn) as GoatCounter events
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="http"], a[href$=".pdf"]');
+    if (a && window.goatcounter && window.goatcounter.count)
+      window.goatcounter.count({ path: a.href, title: a.textContent.trim(), event: true });
+  });
+</script>
+<script data-goatcounter="https://davidngu.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
