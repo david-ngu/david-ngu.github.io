@@ -260,3 +260,11 @@ h3 { font: 600 17px/1.35 "IBM Plex Sans", sans-serif; margin: 0 0 2px; }
 .entries .meta + .meta { margin-top: 0; }
 .entries .meta + p:not(.meta) { margin-top: 2px; }
 .news-title { margin-top: 28px; }
+.abstract { margin-top: 6px; }
+.abstract summary { cursor: pointer; width: fit-content; font: 18px/1.2 "VT323", monospace; color: var(--link); list-style: none; }
+.abstract summary::-webkit-details-marker { display: none; }
+.abstract summary::before { content: "[+] "; }
+.abstract[open] summary::before { content: "[−] "; }
+.abstract summary:hover { text-decoration: underline; }
+.abstract p { font-size: 15px; color: var(--ink); margin: 6px 0 0; padding: 8px 12px; background: var(--steel); border-left: 3px solid var(--navy); }
+@media (prefers-color-scheme: dark) { .abstract p { border-left-color: var(--butter); } }
